@@ -1,155 +1,111 @@
-jQuery(document).ready(function() {
-  "use strict";
+////Slider///////////////
+		<!-- Image slidder -->
+		<section id="image_gallery">
+			<div class="team-header">
+				<h1>Photo Gallery</h1>
+				<p>Governing Body formed and appointed Project Evaluation & Monitoring Committee.</p>
+				<div style="width: 30%;margin:20px auto 50px auto" class="divider2"></div>
+			</div>
+			<div class="carousel-container">
+				<div class="carousel-main" id="carousel">
+					<div class="carousel-feature bg-1">
+						<a href="#"><img class="carousel-image" alt="featureCarousel-1" width="420" height="270"
+								src="https://www.cvrce.edu.in/images/photo/photo_1510602181611144.jpg"></a>
+						<p>Governing Body formed and appointed Project Evaluation & Monitoring Committee.</p>
+						<div style="width: 30%;margin:20px auto 50px auto" class="divider5"></div>
+					</div>
 
-  $("#slider-carousel").carouFredSel({
-    responsive: true,
-    width: "100%",
-    circular: true,
-    scroll: {
-      items: 1,
-      duration: 500,
-      pauseOnHover: true
-    },
-    auto: true,
-    items: {
-      visible: {
-        min: 1,
-        max: 1
-      },
-      height: "variable"
-    },
-    pagination: {
-      container: ".sliderpager",
-      anchorBuilder: false
-    }
-  });
+					<div class="carousel-feature bg-2">
+						<a href="#"><img class="carousel-image" alt="featureCarousel-2" width="420" height="20"
+								src="https://www.cvrce.edu.in/images/photo/photo_1451001181458349.jpg"></a>
+						<p>Governing Body formed and appointed Project Evaluation & Monitoring Committee.</p>
+						<div style="width: 30%;margin:20px auto 50px auto" class="divider5"></div>
+					</div>
 
-  $(".portfolio-carousel").carouFredSel({
-    responsive: true,
-    width: "100%",
-    circular: true,
-    prev: "#prev",
-    next: "#next",
-    scroll: {
-      items: 1,
-      duration: 500,
-      pauseOnHover: true
-    },
-    auto: true,
-    items: {
-      visible: {
-        min: 1,
-        max: 3
-      },
-      height: "variable"
-    }
-  });
+					<div class="carousel-feature bg-3">
+						<a href="#"><img class="carousel-image" alt="featureCarousel-3" width="420" height="270"
+								src="https://www.cvrce.edu.in/images/photo/photo_1481001181548524.jpg"></a>
+						<p>Governing Body formed and appointed Project Evaluation & Monitoring Committee.</p>
+						<div style="width: 30%;margin:20px auto 50px auto" class="divider5"></div>
+					</div>
+					<div class="carousel-feature bg-4">
+						<a href="#"><img class="carousel-image" alt="featureCarousel-3" width="420" height="270"
+								src="https://www.cvrce.edu.in/images/photo/photo_1481001181545142.jpg"></a>
+						<p>Governing Body formed and appointed Project Evaluation & Monitoring Committee.</p>
+						<div style="width: 30%;margin:20px auto 50px auto" class="divider5"></div>
+					</div>
+					<div class="carousel-feature bg-4">
+						<a href="#"><img class="carousel-image" alt="featureCarousel-3" width="420" height="270"
+								src="https://www.cvrce.edu.in/images/photo/photo_1451001181458343.jpg"></a>
+						<p>Governing Body formed and appointed Project Evaluation & Monitoring Committee.</p>
+						<div style="width: 30%;margin:20px auto 50px auto" class="divider5"></div>
+					</div>
+					<div class="carousel-feature bg-4">
+						<a href="#"><img class="carousel-image" alt="featureCarousel-3" width="420" height="270"
+								src="https://www.cvrce.edu.in/images/photo/photo_1451001181455371.jpg"></a>
+						<p>Governing Body formed and appointed Project Evaluation & Monitoring Committee.</p>
+						<div style="width: 30%;margin:20px auto 50px auto" class="divider5"></div>
+					</div>
 
-  $(".team-carousel").carouFredSel({
-    responsive: true,
-    width: "100%",
-    circular: true,
-    prev: "#team-prev",
-    next: "#team-next",
-    scroll: {
-      items: 1,
-      duration: 500,
-      pauseOnHover: true
-    },
-    auto: true,
-    items: {
-      visible: {
-        min: 1,
-        max: 4
-      },
-      height: "variable"
-    }
-  });
+				</div>
+				<!-- <p>
+						  <a href="#" id="carousel-left"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+					  </a>
+						  <a href="#" id="carousel-right"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+					  </a>
+						</p> -->
+			</div>
+		</section>
+		<!-- End -->
 
-  $(".testimonial-carousel").carouFredSel({
-    responsive: true,
-    width: "100%",
-    circular: true,
-    scroll: {
-      items: 1,
-      duration: 500,
-      pauseOnHover: true
-    },
-    auto: true,
-    items: {
-      visible: {
-        min: 1,
-        max: 1
-      },
-      height: "variable"
-    },
-    pagination: {
-      container: ".testipager",
-      anchorBuilder: false
-    }
-  });
+    //CSS//--------------------------------------------------------------------------------/
+    /*****Image slider*********/
+#image_gallery .carousel-container{
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: #2F8AFF;
+}
 
-  $(window).scroll(function() {
-    var top = $(window).scrollTop();
-    if (top >= 60) {
-      $("header").addClass("nav-background");
-      
-    } else if ($("header").hasClass("nav-background")) {
-      $("header").removeClass("nav-background");
-    }
-  });
+.carousel-container {
+  position: relative;
+  width: 840px;
+}
 
-  $("#menu").slicknav({
-    label: ""
-  });
+.carousel-main {
+  height: 200px;
+  width: 840px;
+  position: relative;
+  margin-bottom: 0.5em;
+  font-size: 12px;
+  font-family: Arial;
+}
 
-  $("#main").stellar();
+.carousel-feature {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.carousel-feature a {
+  font-size: 18px;
+}
 
-  $(".animation").each(function() {
-    var waypoint = new Waypoint({
-      element: this,
-      handler: function(direction) {
-        var animation = $(this.element).attr("data-animation");
-        $(this.element).css("opacity", "1");
-        $(this.element).addClass("animated " + animation);
+.carousel-image {
+  border: 0;
+  display: block;
+}
 
-      },
-      offset: "75%"
-    });
-  });
+p {
+  text-align: center;
+}
 
-  /*** for smooth scrolling ***/
-
-  $("a").smoothScroll();
-
-  /** for functional contact form **/
-
-  $(".contact #submit").on("click", function(e) {
-    e.preventDefault();
-    var name = $("#name").val();
-    var email = $("#email").val();
-    var subject = $("#subject").val();
-    var message = $("#message").val();
-    var form = new Array({
-      name: name,
-      email: email,
-      subject: subject,
-      message: message
-    });
-
-    $.ajax({
-      type: "POST",
-      url: "contact.php",
-      data: { action: "contact", form: form }
-    }).done(function(data) {
-      $("#contact .result").html(data);
-
-      $(".contact-form")[0].reset();
-    });
-  });
-});
-
-/************* */
+************* */
 /*!
  * Feature Carousel, Version 1.3
  * http://www.bkosolutions.com
@@ -922,13 +878,169 @@ var carousel = $("#carousel").featureCarousel({
 });
 
 
-/**********overview */
-var svg = document.getElementsByTagName("svg");
 
-var rect = document.getElementsByTagName("rect");
 
-var text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-text.setAttribute('x', '10');
-text.setAttribute('y', '20');
-text.setAttribute('fill', '#000');
-text.textContent = 'Hello, I am a blah blah blah blah blah';
+
+//Footer//---------------------------
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="animation" data-animation="fadeInLeft">
+							<h1>CVRCETBI</h1>
+							<p>Innovations –Technology Business Incubator (NIDHI – TBI) founded in 2019, a
+								non-profit
+								organization with an integral role in catalyzing the entrepreneurial movement in India.
+								By supporting
+								entrepreneurs and start-up ideas, we will highlight India's reputation as a destination
+								for Entrepreneurship
+								and Innovation.</p>
+							<p><i class="fa fa-envelope"></i><span class="contact-email">CVRCETBI@email.com</span></p>
+							<p><i class="fa fa-mobile"></i><span class="contact-phone">+9658884153</span></p>
+							<p><i class="fa fa-location-arrow"></i><span class="contact-location">Bidyanagar, Mahura,
+									Janla, Bhubaneswar</span></p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="animation" data-animation="fadeInLeft">
+							<h1>Get Blog Updates</h1>
+							<form class="update-form">
+								<fieldset>
+									<input type="text" id="take-email" placeholder="Enter your email here" />
+								</fieldset>
+								<fieldset>
+									<input type="submit" id="submit-button" value="Sign Up" />
+								</fieldset>
+							</form>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="animation" data-animation="fadeInLeft">
+							<h1>Stay In Touch</h1>
+							<ul class="footer-social-links">
+								<li><a href="#"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a>
+								</li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a>
+								</li>
+								<li><a href="#"><i class="fa fa-youtube"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<p>Copyright &copy;<span class="primary">CVRCETBI</span> 2015 . All Rights Reserved.</p>
+			</div>
+		</footer>
+    //css----------------------------------------------
+/* footer */
+
+footer {
+  padding-top: 56px;
+}
+
+footer h1 {
+  padding-bottom: 28px;
+}
+
+footer p i {
+  color: #2d82d8;
+}
+
+footer p span {
+  padding-left: 15px;
+  font-weight: bold;
+}
+footer p{
+  text-align: justify;
+}
+
+footer p.about {
+  margin-bottom: 20px;
+}
+
+form.update-form input:not([type="submit"]),
+textarea {
+  width: 100%;
+  margin-bottom: 40px;
+  color: #777;
+  padding-left: 20px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2) inset;
+  border: none;
+}
+
+#take-email {
+  margin-bottom: 20px;
+}
+
+#submit-button {
+  background-color: #08387f;
+  color: #fff;
+  border: none;
+  padding: 0px 30px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.footer-social-links li {
+  padding: 0 10px;
+  font-size: 28px;
+}
+
+.footer-social-links li a i.fa-facebook {
+  color: #3b5998;
+}
+
+.footer-social-links li a i.fa-twitter {
+  color: #00aced;
+}
+
+.footer-social-links li a i.fa-youtube {
+  color: #bb0000;
+}
+
+.footer-social-links li a i.fa-linkedin {
+  color: #007bb5;
+}
+
+.footer-social-links li a i.fa-dribbble {
+  color: #ea4c89;
+}
+
+.copyright {
+  text-align: center;
+  color: #fff;
+  background-color: #333;
+  height: 42px;
+  line-height: 42px;
+  margin-top: 56px;
+}
+
+footer p span.primary {
+  padding-left: 0px;
+}
+
+.copyright p {
+  margin: 0 0 0 0;
+}
+
+.nav-background {
+  box-shadow: 1px 1px 10px gray;
+  background: #fff;
+  color: gray !important;
+}
+
+.nav-background-transparent {
+  background: #fff;
+  box-shadow: none;
+}
+
+.copyright p{
+  text-align: center;
+}
