@@ -99,6 +99,8 @@ header nav ul li a:focus {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
     url(./img/tbi/banner-1.jpg);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
 }
 
@@ -307,12 +309,10 @@ header nav ul li a:focus {
 }
 
 .divider3 {
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.3),
-    #e44236,
-    rgba(0, 0, 0, 0.3)
-  );
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 0.3),
+      #e44236,
+      rgba(0, 0, 0, 0.3));
   height: 5px;
   border-radius: 5px;
 }
@@ -339,12 +339,12 @@ a {
 
 .carousel-container {
   position: relative;
-  width: 80vw;
+  width: 70vw;
 }
 
 .carousel-main {
   height: 400px;
-  width: 80vw;
+  width: 70vw;
   position: relative;
   margin-bottom: 0.5em;
   font-size: 2rem;
@@ -417,6 +417,7 @@ p {
   text-transform: capitalize;
   font-weight: bold;
 }
+
 #vission_mission img {
   height: 240px;
 }
@@ -459,11 +460,9 @@ p {
   top: 100%;
   left: 0px;
   text-align: center;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 10%,
-    rgba(0, 0, 0, 0.9)
-  );
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 0.9));
   width: 100%;
   height: 100%;
   transition: all 0.3s ease-in;
@@ -858,8 +857,32 @@ footer p span.primary {
   margin-left: auto;
 }
 
+.d_none {
+  display: block;
+}
+
+@media screen and (max-width: 1224px) {
+  .d_none {
+    display: none;
+  }
+
+  header nav ul li {
+    padding-left: 10px;
+  }
+
+  #slider {
+    margin-top: 100px !important;
+  }
+}
+
 /************************/
 @media screen and (max-width: 768px) {
+
+
+  #slider {
+    margin-top: 100px !important;
+  }
+
   #image_gallery .carousel-container .carousel-image {
     width: 30vw;
   }
@@ -873,19 +896,51 @@ footer p span.primary {
     width: 95vw;
     padding: 2vw;
   }
+
+  #slider #slider-carousel h1 {
+    font-size: 2.5rem !important;
+  }
+
+  #slider #slider-carousel li {
+    margin-top: 0px;
+  }
+
+  #image_gallery .carousel-container .carousel-image {
+    width: 50vw;
+    height: 30vw;
+  }
+
+  #image_gallery p {
+    font-size: 1.5rem;
+    background: #7f8fa6;
+    color: white;
+    font-weight: bold !important;
+    box-shadow: 1px 1px 1px gray;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  .logo img {
+    width: 200px;
+  }
+
+  .d_none {
+    display: block;
+  }
+
   #vission_mission img {
     height: 140px;
   }
+
   #team li img {
     width: 80%;
   }
+
   #team .overlay-content {
     padding-top: 30px;
     padding-right: 30px;
   }
+
   .team .inner-content .overlay-content {
     top: 78px;
   }
@@ -931,8 +986,7 @@ footer p span.primary {
     width: 100vw;
   }
 
-  #image_gallery .carousel-feature {
-  }
+  #image_gallery .carousel-feature {}
 
   #image_gallery {
     padding-bottom: 150px;
